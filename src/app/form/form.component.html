@@ -1,0 +1,53 @@
+<form [formGroup]="employeeform" >
+    <div class="center-container">
+        <nz-card style="width:100%;" nzTitle="Form" >
+            <div nz-row [nzGutter]="24">
+                <div nz-col class="gutter-row space" [nzSpan]="12" >
+                    User Name
+                </div>
+                <div nz-col class="gutter-row space" [nzSpan]="12" >
+                    <input nz-input formControlName="Fullname" placeholder="Fullnmae"  />
+                </div>
+                <div nz-col class="gutter-row space" [nzSpan]="12" >
+                    Age
+                </div>
+                <div nz-col class="gutter-row space" [nzSpan]="12" >
+                    <input nz-input formControlName="age" placeholder="age"  />
+                </div>
+                <div nz-col class="gutter-row space" [nzSpan]="12">
+                    Email
+                </div>
+                <div nz-col class="gutter-row space" [nzSpan]="12">
+                    <input nz-input formControlName="email" placeholder="E-mail"  />
+                </div>
+                <div nz-col class="gutter-row space" [nzSpan]="8" nzOffset="20">
+                    <button nz-button nzType="primary" *ngIf="!isEdit" (click)="onSubmit()">Submit</button>
+                </div>
+                <div nz-col class="gutter-row space" [nzSpan]="8" nzOffset="20">
+                    <button nz-button nzType="primary" *ngIf="isEdit" (click)="onAdd()">Update</button>
+                </div>
+            </div>
+        </nz-card>
+    </div>
+</form>
+<nz-table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of  getAllUser">
+        <td>{{data.Fullname}}</td>
+        <td>{{data.age}}</td>
+        <td>{{data.email}}</td>
+        <td>
+            <button nz-button class="btn" nzType="primary" (click)="onDelete(data)">Delete</button>
+            <button nz-button class="btn" nzType="primary"  (click)="onUpdate(data)">Update</button>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>

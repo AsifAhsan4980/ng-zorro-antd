@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "Fullname": "Asif",
+      "age": "25",
+      "email": "asifahsan727@gmail.in",
+      "id": 1
+    },
+    {
+      "Fullname": "sbaid",
+      "age": "20",
+      "email": "shohebrahman1@gmail.com",
+      "id": 2
+    }
+  ]
+}

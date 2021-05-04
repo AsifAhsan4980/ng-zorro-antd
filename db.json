@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "email": "typicode"
+    },
+    {
+      "id": "1",
+      "name" : " Fardin",
+      "email" : "hsd@email.com"
+      
+    }
+  ],
+  "comments": [
+    {
+      "id": 2,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
